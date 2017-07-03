@@ -1,5 +1,6 @@
 ﻿using AspCoreServer.Data;
 using AspCoreServer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace AspCoreServer.Controllers
 {
+  [Authorize]
   [Route("api/[controller]")]
   public class UsersController : Controller
   {
